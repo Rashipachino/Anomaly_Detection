@@ -14,7 +14,7 @@ print("done loading data")
 data = df.drop(columns=["record ID"], axis=1).copy()
 
 print("training model")
-model = IsolationForest(contamination=float(0.004), n_estimators=1000, max_samples=205, max_features=3)
+model = IsolationForest(contamination=float(0.004), n_estimators=500, max_samples=256, max_features=3)
 model.fit(data.values)
 print("done training model")
 
